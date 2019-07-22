@@ -20,7 +20,7 @@ XPayUtils.alipay(final Activity activity, final String orderInfo, final AlipayLi
 public class WXPayEntryActivity extends AppCompatActivity implements IWXAPIEventHandler {
 
     private IWXAPI iwxapi;
-    private final String APP_ID = "您应用的app_Id";
+    private static final String APP_ID = "您应用的app_Id";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
