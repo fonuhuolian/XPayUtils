@@ -2,8 +2,12 @@ package com.bianmin.xpayutils;
 
 import android.app.Activity;
 import android.text.TextUtils;
+import android.widget.Toast;
 
 import com.alipay.sdk.app.PayTask;
+import com.tencent.mm.opensdk.modelpay.PayReq;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
 import java.util.Map;
 
@@ -72,5 +76,36 @@ public class XPayUtils {
             }
         });
         payThread.start();
+    }
+
+
+    /**
+     * TODO 微信支付
+     *
+     * @param req 支付需要的参数
+     */
+    public static void wechatPat(Activity activity, WechatPayReq req) {
+
+        if (activity == null || req == null)
+            return;
+
+        // 将该app注册到微信
+        final IWXAPI wxapi = WXAPIFactory.createWXAPI(activity, req.getAppId());
+
+        if (!wxapi.isWXAppInstalled()) {
+            Toast.makeText(activity, "您尚未安装微信客户端", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        PayReq request = new PayReq();
+        request.appId = req.getAppId();
+        request.partnerId = req.getPartnerId();
+        request.prepayId = req.getPrepayId();
+        request.packageValue = req.getPackageValue();
+        request.nonceStr = req.getNonceStr();
+        request.timeStamp = req.getTimeStamp();
+        request.sign = req.getSign();
+
+        wxapi.sendReq(request);
     }
 }
