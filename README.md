@@ -15,7 +15,7 @@ XPayUtils.alipay(final Activity activity, final String orderInfo, final AlipayLi
 
 1.包名目录下创建`wxapi`文件夹
 
-2.此包名下创建名为`WXPayEntryActivity`的Activity,并实现`IWXAPIEventHandler`接口
+2.此包名创建名为`WXPayEntryActivity`的Activity,并实现`IWXAPIEventHandler`接口
 ```
 public class WXPayEntryActivity extends AppCompatActivity implements IWXAPIEventHandler {
 
