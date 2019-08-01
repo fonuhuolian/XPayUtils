@@ -90,7 +90,8 @@ public class XPayUtils {
             return;
 
         // 将该app注册到微信
-        final IWXAPI wxapi = WXAPIFactory.createWXAPI(activity, req.getAppId());
+        final IWXAPI wxapi = WXAPIFactory.createWXAPI(activity, null);
+        wxapi.registerApp(req.getAppId());
 
         if (!wxapi.isWXAppInstalled()) {
             Toast.makeText(activity, "您尚未安装微信客户端", Toast.LENGTH_SHORT).show();
