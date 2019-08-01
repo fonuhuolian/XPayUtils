@@ -1,5 +1,25 @@
 # XPayUtils
 
+> 添加依赖
+
+`root build.gradle `
+```
+allprojects {
+    repositories {
+        ...
+        maven {
+            url 'https://jitpack.io'
+        }
+    }
+}
+```
+`module build.gradle `
+```
+dependencies {
+    implementation 'com.github.fonuhuolian:XPayUtils:0.0.6'
+}
+```
+
 - 支付宝支付
 ```
 /**
