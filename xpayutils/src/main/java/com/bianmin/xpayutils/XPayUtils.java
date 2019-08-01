@@ -91,7 +91,10 @@ public class XPayUtils {
 
         // 将该app注册到微信
         final IWXAPI wxapi = WXAPIFactory.createWXAPI(activity, null);
-        wxapi.registerApp(req.getAppId());
+        boolean registerApp = wxapi.registerApp(req.getAppId());
+
+        if (!registerApp)
+            throw new RuntimeException("将该app注册到微信时失败，请检查appId是否正确");
 
         if (!wxapi.isWXAppInstalled()) {
             Toast.makeText(activity, "您尚未安装微信客户端", Toast.LENGTH_SHORT).show();
