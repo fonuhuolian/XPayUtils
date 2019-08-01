@@ -16,7 +16,7 @@ allprojects {
 `module build.gradle `
 ```
 dependencies {
-    implementation 'com.github.fonuhuolian:XPayUtils:0.0.6'
+    implementation 'com.github.fonuhuolian:XPayUtils:1.0.0'
 }
 ```
 
