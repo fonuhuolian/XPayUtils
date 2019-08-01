@@ -84,7 +84,7 @@ public class XPayUtils {
      *
      * @param req 支付需要的参数
      */
-    public static void wechatPat(Activity activity, WechatPayReq req) {
+    public static void wechatPay(Activity activity, WechatPayReq req) {
 
         if (activity == null || req == null)
             return;

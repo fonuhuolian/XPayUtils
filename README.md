@@ -99,5 +99,5 @@ public class WXPayEntryActivity extends AppCompatActivity implements IWXAPIEvent
   *
   * @param req 支付需要的参数（由商户服务端返回参数）
   */
-XPayUtils.wechatPat(Activity activity, WechatPayReq req) ;
+XPayUtils.wechatPay(Activity activity, WechatPayReq req) ;
 ```
