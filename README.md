@@ -16,7 +16,7 @@ allprojects {
 `module build.gradle `
 ```
 dependencies {
-    implementation 'com.github.fonuhuolian:XPayUtils:1.0.1'
+    implementation 'com.github.fonuhuolian:XPayUtils:1.0.2'
 }
 ```
 
@@ -97,7 +97,7 @@ public class WXPayEntryActivity extends AppCompatActivity implements IWXAPIEvent
 /**
   * TODO 微信支付
   *
-  * @param req 支付需要的参数（由商户服务端返回参数）
+  * @param req 支付需要的参数（由商户服务端返回参数）如果调用7参构造方法 默认加密类型为MD5
   */
 XPayUtils.wechatPay(Activity activity, WechatPayReq req) ;
 ```

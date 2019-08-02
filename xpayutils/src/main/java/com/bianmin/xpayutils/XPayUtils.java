@@ -105,6 +105,7 @@ public class XPayUtils {
         request.nonceStr = req.getNonceStr();
         request.timeStamp = req.getTimeStamp();
         request.sign = req.getSign();
+        request.signType = req.getSign_type();
 
         wxapi.sendReq(request);
     }
