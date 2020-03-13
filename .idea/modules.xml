@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/GitHub-XPayUtils.iml" filepath="$PROJECT_DIR$/GitHub-XPayUtils.iml" group="XPayUtils" />
       <module fileurl="file://$PROJECT_DIR$/XPayUtils.iml" filepath="$PROJECT_DIR$/XPayUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/XPayUtils-app.iml" filepath="$PROJECT_DIR$/app/XPayUtils-app.iml" group="XPayUtils/app" />
+      <module fileurl="file://$PROJECT_DIR$/xpayutils/XPayUtils-xpayutils.iml" filepath="$PROJECT_DIR$/xpayutils/XPayUtils-xpayutils.iml" group="XPayUtils/xpayutils" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/xpayutils/xpayutils.iml" filepath="$PROJECT_DIR$/xpayutils/xpayutils.iml" />
     </modules>
