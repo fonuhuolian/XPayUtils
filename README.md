@@ -49,7 +49,7 @@ public class WXPayEntryActivity extends AppCompatActivity implements IWXAPIEvent
         setContentView(R.layout.activity_wxpay_entry);
 
         iwxapi = WXAPIFactory.createWXAPI(this, APP_ID, true);
-        iwxapi.registerApp(rAPP_ID);
+        iwxapi.registerApp(APP_ID);
         iwxapi.handleIntent(getIntent(), this);
     }
 
