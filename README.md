@@ -48,7 +48,8 @@ public class WXPayEntryActivity extends AppCompatActivity implements IWXAPIEvent
         // 由第三方App个性化展示支付结果
         setContentView(R.layout.activity_wxpay_entry);
 
-        iwxapi = WXAPIFactory.createWXAPI(this, APP_ID);
+        iwxapi = WXAPIFactory.createWXAPI(this, APP_ID, true);
+        iwxapi.registerApp(rAPP_ID);
         iwxapi.handleIntent(getIntent(), this);
     }
 
